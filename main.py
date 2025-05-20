@@ -1,3 +1,6 @@
+import datetime
+
+
 class OnlineSalesRegisterCollector:
 
     def __init__(self):
@@ -39,11 +42,9 @@ class OnlineSalesRegisterCollector:
             price = self.__item_price.get(item, 0)
             total.append(price)
         if self.__number_items > 10:
-            total_price = sum(total) * (1 - 10 / 100)
-            print(total_price)
+            return sum(total) * (1 - 10 / 100)
         else:
-            total_price = sum(total)
-            return total_price
+            return sum(total)
 
     def twenty_percent_tax_calculation(self):
         twenty_percent_tax = []
